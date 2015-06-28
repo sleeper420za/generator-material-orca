@@ -1,0 +1,129 @@
+<div class="sidebar-inner c-overflow" ng-controller="SidebarController as sidebar">
+    <div class="profile-menu">
+        <a href="" toggle-submenu>
+            <div class="profile-pic">
+                <canvas avatar-generator="Martin Klasen" width="42" height="42" color="#FFF" font-size="20px" background-color="#E91E63"></canvas>
+            </div>
+
+            <div class="profile-info">
+                Martin Klasen
+                <i class="md md-arrow-drop-down"></i>
+            </div>
+        </a>
+
+        <ul class="main-menu">
+            <li>
+                <a ui-sref="app.profile.about"><i class="md md-person"></i> View Profile</a>
+            </li>
+            <li>
+                <a href=""><i class="md md-settings-input-antenna"></i> Privacy Settings</a>
+            </li>
+            <li>
+                <a href=""><i class="md md-settings"></i> Settings</a>
+            </li>
+            <li>
+                <a ui-sref="login"><i class="md md-history"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="main-menu">
+        <li ui-sref-active-eq="active">
+            <a ui-sref="app" data-ng-click="main.sidebarStat($event)"><i class="md md-home"></i> Home</a>
+        </li>
+        <li ui-sref-active-eq="active">
+            <a ui-sref=".typography" data-ng-click="main.sidebarStat($event)"><i class="md md-format-underline"></i> Typography</a>
+        </li>
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'widgets' }">
+            <a href="" toggle-submenu><i class="md md-now-widgets"></i> Widgets</a>
+
+            <ul>
+                <li><a ui-sref-active-eq="active" ui-sref=".templates" data-ng-click="main.sidebarStat($event)">Templates</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".widgets" data-ng-click="main.sidebarStat($event)">Widgets</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'tables' }">
+            <a href="" toggle-submenu><i class="md md-view-list"></i> Tables</a>
+
+            <ul>
+                <li><a ui-sref-active-eq="active" ui-sref=".normal-tables" data-ng-click="main.sidebarStat($event)">Normal Tables</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".data-tables" data-ng-click="main.sidebarStat($event)">Data Tables</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'forms' }">
+            <a href="" toggle-submenu><i class="md md-my-library-books"></i> Forms</a>
+
+            <ul>
+                <li><a ui-sref-active-eq="active" ui-sref=".form-elements" data-ng-click="main.sidebarStat($event)">Basic Form Elements</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".form-components" data-ng-click="main.sidebarStat($event)">Form Components</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".form-examples" data-ng-click="main.sidebarStat($event)">Form Examples</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".form-validations" data-ng-click="main.sidebarStat($event)">Form Validation</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'user-interface' }">
+            <a href="" toggle-submenu><i class="md md-swap-calls"></i>User Interface</a>
+            <ul>
+                <li><a ui-sref-active-eq="active" ui-sref=".colors" data-ng-click="main.sidebarStat($event)">Colors</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".animations" data-ng-click="main.sidebarStat($event)">Animations</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".box-shadow" data-ng-click="main.sidebarStat($event)">Box Shadow</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".buttons" data-ng-click="main.sidebarStat($event)">Buttons</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".icons" data-ng-click="main.sidebarStat($event)">Icons</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".alerts" data-ng-click="main.sidebarStat($event)">Alerts</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".notifications" data-ng-click="main.sidebarStat($event)">Notifications & Dialogs</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".media" data-ng-click="main.sidebarStat($event)">Media</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".components" data-ng-click="main.sidebarStat($event)">Components</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".other-components" data-ng-click="main.sidebarStat($event)">Others</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'charts' }">
+            <a href="" toggle-submenu><i class="md md-trending-up"></i>Charts</a>
+            <ul>
+                <li><a ui-sref-active-eq="active" ui-sref=".flot-charts" data-ng-click="main.sidebarStat($event)">Flot Charts</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".other-charts" data-ng-click="main.sidebarStat($event)">Other Charts</a>
+                </li>
+            </ul>
+        </li>
+
+        <li ui-sref-active-eq="active">
+            <a ui-sref=".calendar" data-ng-click="main.sidebarStat($event)"><i class="md md-today"></i> Calendar</a>
+        </li>
+
+        <li ui-sref-active-eq="active">
+            <a ui-sref=".generic-classes" data-ng-click="main.sidebarStat($event)"><i class="md md-layers"></i> Generic Classes</a>
+        </li>
+
+        <li class="sub-menu" data-ng-class="{ 'active toggled': main.$state.current.menuGroup === 'sample-pages' }">
+            <a href="" toggle-submenu><i class="md md-content-copy"></i> Sample Pages</a>
+            <ul>
+                <li><a data-ng-class="{ 'active': main.$state.includes('app.profile') }" ui-sref="app.profile.about" data-ng-click="main.sidebarStat($event)">Profile</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".list-view" data-ng-click="main.sidebarStat($event)">List View</a>
+                </li>
+                <li><a ui-sref-active-eq="active" ui-sref=".messages" data-ng-click="main.sidebarStat($event)">Messages</a>
+                </li>
+                <li><a ui-sref="404">Error 404</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

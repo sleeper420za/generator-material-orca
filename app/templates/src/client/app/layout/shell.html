@@ -1,0 +1,16 @@
+<section ng-controller="ShellController as shell">
+
+    <header id=header ui-view="header"></header>
+
+    <section id="main">
+
+        <aside id="sidebar" ui-view="sidebar" ng-class="{ 'toggled': main.sidebarToggle.left === true }"></aside>
+        <aside id="chat" ng-include="'app/layout/quickbar.html'" ng-class="{ 'toggled': main.sidebarToggle.right === true }"></aside>
+
+        <section id="content" ui-view="content">
+
+        </section>
+    </section>
+
+    <footer id="footer" ng-include src="'app/layout/footer.html'"></footer>
+</section>

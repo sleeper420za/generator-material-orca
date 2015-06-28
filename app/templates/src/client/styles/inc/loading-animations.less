@@ -1,0 +1,49 @@
+#master {
+    .transition(all 1s);
+}
+
+#header {
+    .animated;
+}
+
+#sidebar {
+    .animated;
+}
+
+#content {
+    .animated;
+}
+
+#content.ng-enter {
+    .bounceInRight;
+}
+
+#master.ng-enter {
+    #header {
+        .fadeInDown;
+    }
+    #sidebar {
+        .fadeInUp;
+    }
+    #content {
+        .bounceInRight;
+    }
+    #login {
+        .fadeInUp;
+    }
+}
+
+#master.ng-leave {
+    #header {
+        .fadeOutUp;
+    }
+    #sidebar {
+        .fadeOutDown;
+    }
+    #content {
+        .bounceOutRight;
+    }
+    .login-box {
+        .fadeOutDown;
+    }
+}
