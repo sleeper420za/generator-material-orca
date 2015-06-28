@@ -6,7 +6,7 @@ var generators = yeoman.generators;
 var yosay = require('yosay');
 var chalk = require('chalk');
 
-var material-orcaGenerator = generators.Base.extend({
+var materialOrcaGenerator = generators.Base.extend({
 
     constructor: function() {
         // arguments and options should be
@@ -116,4 +116,4 @@ var material-orcaGenerator = generators.Base.extend({
     }
 });
 
-module.exports = material-orcaGenerator;
+module.exports = materialOrcaGenerator;
