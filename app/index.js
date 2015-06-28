@@ -54,6 +54,7 @@ var materialOrcaGenerator = generators.Base.extend({
         this.mkdir('src/client');
         this.mkdir('src/client/app');
         this.mkdir('src/server');
+        this.mkdir('data');
         this.mkdir('fonts');
         this.mkdir('fonts/roboto');
         this.mkdir('fonts/weather-icons');
@@ -85,6 +86,7 @@ var materialOrcaGenerator = generators.Base.extend({
         this.directory('src/client/images');
         this.directory('src/client/styles');
         this.directory('src/client/test-helpers');
+        this.directory('data');
         this.directory('fonts');
         this.directory('fonts/roboto');
         this.directory('fonts/weather-icons');
