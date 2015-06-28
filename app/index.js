@@ -54,7 +54,6 @@ var materialOrcaGenerator = generators.Base.extend({
         this.mkdir('src/client');
         this.mkdir('src/client/app');
         this.mkdir('src/server');
-        this.mkdir('fonts');
     },
 
     packageFiles: function () {
@@ -72,7 +71,6 @@ var materialOrcaGenerator = generators.Base.extend({
 
     assets: function () {
         this.copy('gulp.png', 'gulp.png');
-        this.bulkCopy('fonts', 'fonts');
     },
 
     testRunnerFiles: function () {
