@@ -13,8 +13,8 @@
     }
 
     var config = {
-        appErrorPrefix: '[MaterialOrca Error] ',
-        appTitle: 'MaterialOrca'
+        appErrorPrefix: '[<%= appName %> Error] ',
+        appTitle: '<%= appName %>'
     };
 
     core.value('config', config);
