@@ -31,7 +31,7 @@
         }
 
         &.toggled {
-            //.animated(fadeInRight, 200ms);
+            .animated(fadeInRight, 200ms);
             z-index: 10;
         }
     }
@@ -78,13 +78,29 @@
                     .opacity(1);
                 }
             }
-
         }
     }
 }
 
 body.login-content {
+
     text-align: center;
+
+    #sidebar {
+        text-align: left;
+    }
+
+    #header {
+        text-align: left;
+    }
+
+    #content {
+        text-align: left;
+    }
+
+    #chat {
+        text-align: left;
+    }
 
     &:after {
         content: "";
@@ -94,14 +110,51 @@ body.login-content {
         height: 100%;
     }
 
-    &:before {
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: @m-cyan;
-        content: "";
-        z-index: 0;
-    }
+//    &:before {
+//        height: 50%;
+//        width: 100%;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        background: @m-cyan;
+//        content: "";
+//        z-index: 0;
+//    }
 }
+
+#l-login {
+    .animated;
+}
+
+#l-login.ng-enter {
+    .bounceInDown;
+}
+
+#l-login.ng-leave {
+    display: none;
+}
+
+#l-register {
+    .animated;
+}
+
+#l-register.ng-enter {
+    .bounceInDown;
+}
+
+#l-register.ng-leave {
+    display: none;
+}
+
+#l-forget-password {
+    .animated;
+}
+
+#l-forget-password.ng-enter {
+    .bounceInDown;
+}
+
+#l-forget-password.ng-leave {
+    display: none;
+}
+

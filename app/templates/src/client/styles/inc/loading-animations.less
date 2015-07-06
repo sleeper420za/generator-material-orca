@@ -1,5 +1,6 @@
 #master {
     .transition(all 1s);
+    .animated;
 }
 
 #header {
@@ -18,7 +19,17 @@
     .bounceInRight;
 }
 
+#content.ng-leave {
+    display: none;
+}
+
 #master.ng-enter {
+    #login {
+        display: none;
+    }
+    #chat {
+        display: none;
+    }
     #header {
         .fadeInDown;
     }
@@ -28,12 +39,12 @@
     #content {
         .bounceInRight;
     }
-    #login {
-        .fadeInUp;
-    }
 }
 
 #master.ng-leave {
+    #chat {
+        display: none;
+    }
     #header {
         .fadeOutUp;
     }
@@ -42,8 +53,5 @@
     }
     #content {
         .bounceOutRight;
-    }
-    .login-box {
-        .fadeOutDown;
     }
 }
